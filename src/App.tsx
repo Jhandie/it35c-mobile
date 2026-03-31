@@ -17,7 +17,7 @@ import '@ionic/react/css/float-elements.css';
 import '@ionic/react/css/text-alignment.css';
 import '@ionic/react/css/text-transformation.css';
 import '@ionic/react/css/flex-utils.css';
-import '@ionic/react/css/display.css';
+import '@ionic/react/css/display.css' ;
 
 /**
  * Ionic Dark Mode
@@ -32,6 +32,8 @@ import '@ionic/react/css/palettes/dark.system.css';
 
 /* Theme variables */
 import './theme/variables.css';
+import login from './pages/Login';
+import Menu from './pages/Menu';
 
 setupIonicReact();
 
@@ -39,12 +41,10 @@ const App: React.FC = () => (
   <IonApp>
     <IonReactRouter>
       <IonRouterOutlet>
-        <Route exact path="/home">
-          <Home />
-        </Route>
-        <Route exact path="/">
-          <Redirect to="/home" />
-        </Route>
+
+      <Route exact path= "/" component={login}/>
+      <Route exact path="/app" component={Menu}/>
+
       </IonRouterOutlet>
     </IonReactRouter>
   </IonApp>
